@@ -1,8 +1,9 @@
+#Creation of an API wrapper which encompases several NY Times endpoints.
 class NYTimesAPI:
-
+    #The requests library offers a suite of tools for simple API requests
     import requests
 
-
+    #Here we define the API Wrapper object to be used in our Main module. 
     def __init__(self, api_key, api_secret):
         self.base_url = "https://api.nytimes.com/svc"
         self.api_key = api_key

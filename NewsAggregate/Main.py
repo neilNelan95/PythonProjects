@@ -8,6 +8,13 @@ class Main:
 
 
     def run(self):
-        print(self.nyt_client.get_top_stories("technology"))
+        technology = self.nyt_client.get_top_stories("technology")["results"]
+
+        titles = []
+
+        for article in technology :
+            titles.append(article["title"])
+
+        print(titles)
 
 Main().run()
