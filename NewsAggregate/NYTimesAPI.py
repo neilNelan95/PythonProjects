@@ -14,7 +14,7 @@ class NYTimesAPI:
         full_url = f"{self.base_url}/topstories/v2/{section}.json"
         api_key = self.api_key
 
-        r = self.requests.get(url =full_url, params = {"api-key" : api_key})
+        r = requests.get(url =full_url, params = {"api-key" : api_key})
 
         r.raise_for_status()
 
